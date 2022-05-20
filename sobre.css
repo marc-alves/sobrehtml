@@ -1,0 +1,282 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box
+}
+    
+    a{
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    
+    a:hover {
+      opacity: 0.7;
+    }
+    
+    .logo {
+      font-size: 24px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+    
+    nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #23232e;
+      height: 8vh;
+    }
+    
+    main{
+      background: url("/imagens/fundo.jpg") no-repeat
+      center center;
+      background-size: cover;
+      height: 95vh;
+    }
+    .nav-list {
+      list-style: none;
+      display: flex;
+    }
+    
+    .nav-list li {
+      letter-spacing: 3px;
+      margin-left: 32px;
+    }
+    
+    .mobile-menu {
+      display: none;
+      cursor: pointer;
+    }
+    
+    .mobile-menu div{
+      width: 32px;
+      height: 2px;
+      background: #fff;
+      margin: 8px;
+      transition: 0.3s;
+    }
+    
+    @media (max-width: 999px) {
+      body{
+        overflow-x: hidden;
+      }
+      .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+      }
+    
+      .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+      }
+    
+      .mobile-menu {
+        display: block;
+      }
+    }
+    
+    .nav-list.active {
+      transform: translateX(0);
+    }
+    
+    @keyframes navLinkFade {
+      from {
+        opacity: 0;
+      }
+      to{
+        opacity: 1;
+        transform: translate(0);
+      }
+    }
+    
+    .mobile-menu.active .line1 {
+      transform: rotate(-45deg) translate(-8px, 8px);
+    }
+    
+    .mobile-menu.active .line2 {
+      opacity: 0;
+    }
+    
+    .mobile-menu.active .line3 {
+      transform: rotate(45deg) translate(-5px, -7px);
+    }
+  
+  body{
+    font-family:'Times New Roman', Times, serif;
+    color:rebeccapurple;
+  }
+  h1, h2, h3{
+    font-family:'Courier New', Courier, monospace;
+  }
+  .header{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    background-image: url(/img/hear-dnt.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color:#FFFFFF;
+    text-align: center;
+    padding:20px;
+  }
+  .header h1{
+    font-family: inherit;
+    color:#FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size:52px;
+    }
+    .header p{
+      font-size:30px;
+      margin-bottom: 2em;
+    }
+    #sobre{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding:15px 15px 20px 20px;
+      background-color: #23232e;
+      color:#FFFFFF;
+    }
+    #sobre h2 {
+      color:#FFFFFF;
+      font-family:inherit;
+      font-size:36px;
+      padding-top: 25px;
+      text-align: center;
+    }
+    #sobre p{
+      margin-bottom: 2.5em;
+      max-width: 1000px;
+      font-size: 20px;
+    }
+    #serviços{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+      padding-bottom: 70px;
+      color:#23232e;
+      background-color: #f6b332;
+    }
+    #serviços div{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-top:30px;
+      font-size: 20px;
+    }
+    #serviços{
+      flex-direction: row;
+      flex-wrap:wrap;
+      align-items: flex-start;
+      max-width:1000px;
+      margin: 0 auto;
+      font-family:inherit;
+    }
+    #serviços h2{
+      color: #23232e;
+      font-family:inherit;
+      font-size:36px;
+      text-align: center;
+      width: 100%;
+    }#serviços div{
+      flex-grow:1;  
+      flex-basis:80px;
+      padding:0 10px;
+    }
+    #fotos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: top;
+    }
+    fotos h2{
+      margin-bottom:20px;
+    }
+    fotos img{
+      width: 100%;
+    }
+    #contato {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+    #contato h2{
+      color:#FFFFFF;
+    }
+    footer{
+      display: flex;
+      padding: 10px;
+      background-color: #23232e;
+      color: #FFFFFF;
+    }
+    footer a{
+      text-decoration: none;
+      color:  #23232e;
+    }
+    @media screen and (min-width:768px){
+      .header {  
+          height: 600px;
+          height:60vh;
+          justify-content: center;
+      }
+      #sobre{
+        height: 250px;
+        height: 30vh;
+        justify-content: center;
+        min-height: 250px;
+      }
+      }
+      #fotos{
+        flex-direction:row;
+        flex-wrap: wrap;
+      }
+      #fotos h2{
+        width:100%;
+        text-align: center;
+      }
+      #fotos img{
+        width: 33.3333%;
+      }
+      #contato {
+        flex-direction: row;
+        flex-wrap:wrap;
+        justify-content: space-around;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+      #contato h2 {
+        color:  #FFFFFF;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        width:100%;
+        font-size:25px;
+      }
+      #contato p{
+        width:100%;
+        color:#FFFFFF;
+        font-size:18pxpx;
+      }
+      #serviços h3{
+      font-size: 20,99px;
+      }
+
+    
